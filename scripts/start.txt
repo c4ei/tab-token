@@ -12,3 +12,13 @@ yarn add @openzeppelin/contracts-upgradeable@^4.8.0
 
 npx hardhat compile
 Compiled 16 Solidity files successfully (evm target: paris).
+
+npx hardhat run scripts/deploy.js --network AAH
+#################################################################
+Couldn't find any versions for "@nomicfoundation/hardhat-ethers" that matches "^2.0.0"
+? Please choose a version of "@nomicfoundation/hardhat-ethers" from this list: 3.0.0
+#################################################################              #####
+npx hardhat run scripts/deploy.js --network AAH
+Deploying contracts with the account: 0xdd1bF770ac033aB1976617CdDEDdF52CB660Cd21
+Token deployed to: 0xcCB5bfC1d2B126338872b2D993E3337924b7042f
+
