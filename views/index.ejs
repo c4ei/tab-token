@@ -1,0 +1,81 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Management</title>
+</head>
+<body>
+  <h1>Token Management</h1>
+  owner : <%=owner%>
+  <!-- Balance Query Form -->
+  <h2>Check Balance</h2>
+  <form action="/balance" method="POST">
+    <input type="text" name="address" placeholder="Address" required />
+    <button type="submit">Check Balance</button>
+  </form>
+  <% if (typeof balance !== 'undefined') { %>
+    <p>Balance of <%= address %>: <%= balance %> Tokens</p>
+  <% } %>
+
+  <!-- Mint Tokens Form -->
+  <h2>Mint Tokens </h2>
+  <form action="/mint" method="POST">
+    <input type="text" name="to" placeholder="Recipient Address" value="0xdd1bF770ac033aB1976617CdDEDdF52CB660Cd21" required />
+    <input type="number" name="amount" placeholder="Amount" required />
+    <button type="submit">Mint</button>
+  </form>
+
+  <!-- Burn Tokens Form -->
+  <h2>Burn Tokens</h2>
+  <form action="/burn" method="POST">
+    <input type="number" name="amount" placeholder="Amount" required />
+    <button type="submit">Burn</button>
+  </form>
+
+  <!-- Transfer Tokens Form -->
+  <h2>Transfer Tokens</h2>
+  <form action="/transfer" method="POST">
+    <input type="text" name="to" placeholder="Recipient Address" required />
+    <input type="number" name="amount" placeholder="Amount" required />
+    <button type="submit">Transfer</button>
+  </form>
+
+  <!-- Freeze Account Form -->
+  <h2>Freeze Account</h2>
+  <form action="/freeze" method="POST">
+    <input type="text" name="account" placeholder="Account Address" required />
+    <input type="number" name="daysToFreeze" placeholder="Days to Freeze" required />
+    <button type="submit">Freeze</button>
+  </form>
+
+  <!-- Check Frozen Status Form -->
+  <h2>Check Frozen Status</h2>
+  <form action="/isFrozen" method="POST">
+    <input type="text" name="account" placeholder="Account Address" required />
+    <button type="submit">Check Status</button>
+  </form>
+  <% if (typeof isFrozen !== 'undefined') { %>
+    <p>Account <%= address %> is <%= isFrozen ? 'frozen' : 'not frozen' %></p>
+  <% } %>
+
+  <!-- Locked Balance Form -->
+  <h2>Check Locked Balance</h2>
+  <form action="/lockedBalance" method="POST">
+    <input type="text" name="account" placeholder="Account Address" required />
+    <button type="submit">Check Locked Balance</button>
+  </form>
+  <% if (typeof lockedBalance !== 'undefined') { %>
+    <p>Locked balance of <%= address %>: <%= lockedBalance %> Tokens</p>
+  <% } %>
+
+  <!-- Set Locked Balance Form -->
+  <h2>Set Locked Balance</h2>
+  <form action="/setLockedBalance" method="POST">
+    <input type="text" name="account" placeholder="Account Address" required />
+    <input type="number" name="amount" placeholder="Amount" required />
+    <button type="submit">Set Locked Balance</button>
+  </form>
+</body>
+</html>

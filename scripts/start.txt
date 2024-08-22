@@ -20,5 +20,15 @@ Couldn't find any versions for "@nomicfoundation/hardhat-ethers" that matches "^
 #################################################################              #####
 npx hardhat run scripts/deploy.js --network AAH
 Deploying contracts with the account: 0xdd1bF770ac033aB1976617CdDEDdF52CB660Cd21
-Token deployed to: 0xcCB5bfC1d2B126338872b2D993E3337924b7042f
+Token deployed to: 0x783a0669A6689CF4Da9555b904fe88712910bE1d
+Contract owner is: 0xdd1bF770ac033aB1976617CdDEDdF52CB660Cd21
+
+npx hardhat run scripts/deploy.js --network C4EI
+Deploying contracts with the account: 0xdd1bF770ac033aB1976617CdDEDdF52CB660Cd21
+Token deployed to: 0xD952aD5775ddC1B5Da82c5b523304233ca2e60BE
+
+
+
+cd /home/dev/www/service/tab-token
+yarn start
 
