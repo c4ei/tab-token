@@ -1,0 +1,25 @@
+{
+  "name": "tab-token",
+  "version": "1.0.0",
+  "description": "ERC-20 Token implementations with Open Zeppelin. This is also the source code of this [Youtube video](https://www.youtube.com/watch?v=Ll_yACP92Hk&t=2s).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.9"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.7",
+    "@nomicfoundation/hardhat-verify": "^2.0.9",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/contracts-upgradeable": "^4.8.0",
+    "@openzeppelin/hardhat-upgrades": "^3.2.1",
+    "ethers": "^6.13.2"
+  }
+}

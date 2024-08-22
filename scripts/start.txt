@@ -1,0 +1,14 @@
+#################################################################
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network <network-name>
+#################################################################
+
+OpenZeppelin Contracts와 Hardhat 플러그인을 설치합니다:
+
+ncu -u
+yarn add @openzeppelin/contracts-upgradeable@^4.8.0
+
+
+
+npx hardhat compile
+Compiled 16 Solidity files successfully (evm target: paris).
